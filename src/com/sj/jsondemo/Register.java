@@ -12,7 +12,9 @@ public class Register extends Activity{
 
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.layout_register);
-	    dialog = ProgressDialog.show(this, "", "Loading...");  
+	    dialog = ProgressDialog.show(this, "", "Loading..."); 
+	    for(int i=0;i<1000000;i++);
+	    dialog.dismiss();
     }
 
 }

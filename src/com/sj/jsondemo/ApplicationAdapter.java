@@ -3,7 +3,10 @@ package com.sj.jsondemo;
 import java.text.NumberFormat;
 import java.util.List;
 
+import com.sj.timetable.Timetable;
+
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +25,7 @@ public class ApplicationAdapter extends ArrayAdapter<Application>{
     private List<Application> items;
     View v;
     public ApplicationAdapter(Context context, List<Application> items) {
-        super(context, R.layout.app_custom_list, items);
+        super(context, R.layout.activity_home, items);
         this.items = items;
     }
     
@@ -37,18 +40,37 @@ public class ApplicationAdapter extends ArrayAdapter<Application>{
         
         if(v == null) {
             LayoutInflater li = LayoutInflater.from(getContext());
-            v = li.inflate(R.layout.app_custom_list,null);  
+            v = li.inflate(R.layout.activity_home,null);  
             //v.getLayoutParams().width=LayoutParams.WRAP_CONTENT;
            }
         
         Application app = items.get(position);
         
         if(app != null) {
-            ImageView icon = (ImageView)v.findViewById(R.id.appIcon);
-            TextView titleText = (TextView)v.findViewById(R.id.titleTxt);
+        	Button timetable=(Button) v.findViewById(R.id.btn1);
+            ImageView icon = (ImageView)v.findViewById(R.id.imageView1);
+            TextView titleText = (TextView)v.findViewById(R.id.name);
             
          // TableLayout ratingCntr = (TableLayout)v.findViewById(R.id.table1);
-            TextView dlText = (TextView)v.findViewById(R.id.dlTxt);
+            TextView dlText = (TextView)v.findViewById(R.id.username);
+            
+            
+            if(timetable !=null)
+            {
+            	OnClickListener l=new OnClickListener(){
+
+            		@Override
+            		public void onClick(View v) {
+            			Toast.makeText(getContext(), "Hello", Toast.LENGTH_LONG).show();
+    				// TODO Auto-generated method stub
+    				//Intent intent=new Intent(v.getContext(), Timetable.class);
+    	            //startActivity(intent);
+            		}
+            };
+            timetable.setOnClickListener(l);
+            }
+            
+            /*
             Button b=(Button)v.findViewById(R.id.button1);
             b.setOnClickListener(new OnClickListener(){
             	public void onClick(View v1){
@@ -57,17 +79,19 @@ public class ApplicationAdapter extends ArrayAdapter<Application>{
             		Toast.makeText(v.getContext(), "Selected"+ttex.getText()+"  "+tpxt.getText(), Toast.LENGTH_LONG).show();
             	}
             });
+            
+            
             if(icon != null) {
                 Resources res = getContext().getResources();
                 String sIcon = "com.sj.jsondemo:drawable/" + app.getIcon();
                 icon.setImageDrawable(res.getDrawable(res.getIdentifier(sIcon, null, null)));
-            }
+            }*/
             
-            if(titleText != null) titleText.setText(app.getTitle());
+            if(titleText != null) titleText.setText(app.getName());
             
             if(dlText != null) {
                 NumberFormat nf = NumberFormat.getNumberInstance();
-                dlText.setText(nf.format(app.getTotalDl())+"Rs.");            
+                dlText.setText((app.getUsername()));            
             }
             
           /*  if(ratingCntr != null && ratingCntr.getChildCount() == 0) {        

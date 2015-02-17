@@ -1,56 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/hot" android:showAsAction="never" android:title="Hot"></item>
+        android:id="@+id/home" android:showAsAction="never" android:title="Home"></item>
    
-    <item android:id="@+id/bill" android:title="Bill" android:visible="true" 
-        android:showAsAction="always" 
-        ></item>
+    
    
     <item android:id="@+id/search" android:title="Search" android:showAsAction="always"></item>
     
-    <item android:id="@+id/sancks" android:title="Snacks" android:showAsAction="never"></item>
+    <item android:id="@+id/TimeTable" android:title="TimeTable" android:showAsAction="never"></item>
     
-    <item android:id="@+id/veg_sandwiches" android:title="Veg Sandwiches" android:showAsAction="never"></item>
+    <item android:id="@+id/MyGroups" android:title="MyGroups" android:showAsAction="never"></item>
     
-    <item android:id="@+id/non_veg_sandwiches" android:title="Non-Veg sandwiches" android:showAsAction="never"></item>
+    <item android:id="@+id/E_NoticeBoard" android:title="E-Notice Board" android:showAsAction="never"></item>
     
-    <item android:id="@+id/starters_VEG" android:title="Veg Starters" android:showAsAction="never"></item>
+    <item android:id="@+id/News" android:title="News" android:showAsAction="never"></item>
     
-    <item android:id="@+id/starters_NON_VEG" android:title="Non-Veg Starters" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/VEG_soup" android:title="Veg Soup" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/Non_veg_soup" android:title="Non-Veg Soup" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/Veg_main_course" android:title="Veg main course" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/Non_veg_main_course" android:title="Non-veg main course" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/egg_main_course" android:title="Egg main course" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/Non_veg_rice" android:title="Non-veg rice" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/veg_rice" android:title="Veg rice" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/veg_chinese" android:title="Veg Chinese" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/veg_chinese_gravy" android:title="Veg Chinese Gravy" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/non_veg_chinese" android:title="Non-veg Chinese" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/non_veg_gravy" android:title="Non-veg Chinese Gravy" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/tandoor" android:title="Tandoor" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/paratahs" android:title="Paratahs" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/papad" android:title="Papad" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/cold_drinks" android:title="Cold Drinks" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/raita_salads" android:title="Raita and Salads" android:showAsAction="never"></item>
-    
-    <item android:id="@+id/milk_shakes" android:title="Milk-Shakes" android:showAsAction="never"></item>
+   
+    <item android:id="@+id/Settings" android:title="Settings" android:showAsAction="never"></item>
 
 </menu>

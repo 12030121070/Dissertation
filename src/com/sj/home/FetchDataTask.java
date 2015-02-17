@@ -16,6 +16,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.sj.jsondemo.GlobalClass;
+
 import android.os.AsyncTask;
 
 public class FetchDataTask extends AsyncTask<String, Void, String>{
@@ -76,7 +78,7 @@ public class FetchDataTask extends AsyncTask<String, Void, String>{
             for(int i=0; i<aJson.length(); i++) {
                 JSONObject json = aJson.getJSONObject(i);
                 Application app = new Application();
-                app.setUid(json.getDouble("u_id"));
+                app.setUid(json.getLong("u_id"));
                 app.setUsername(json.getString("username"));
                 app.setPassword(json.getString("password"));  
                 app.setName(json.getString("name"));

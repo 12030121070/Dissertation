@@ -2,47 +2,26 @@ package com.sj.jsondemo;
 
 import java.util.List;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class Home extends ListActivity implements FetchDataListener{
+public class Home extends Activity{
 	
-private ProgressDialog dialog;
+//private ProgressDialog dialog;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);        
-        setContentView(R.layout.activity_main);        
-        initView();   
-    }
-
-    private void initView() {
-        // show progress dialog
-        dialog = ProgressDialog.show(this, "", "Loading...");
+        setContentView(R.layout.activity_home);        
         
-        String url = "http://192.168.1.100/myphp/apps.php";
-        FetchDataTask task = new FetchDataTask(this);
-        task.execute(url);
-    }
-    
-    @Override
-    public void onFetchComplete(List<Application> data) {
-        // dismiss the progress dialog
-        if(dialog != null)  dialog.dismiss();
-        // create new adapter
-        ApplicationAdapter adapter = new ApplicationAdapter(this, data);
-        // set the adapter to list
-        setListAdapter(adapter);        
-    }
-
-    @Override
-    public void onFetchFailure(String msg) {
-        // dismiss the progress dialog
-        if(dialog != null)  dialog.dismiss();
-        // show failure message
-        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();        
+        final GlobalClass globalVariable = (GlobalClass) getApplicationContext();
+        int prn=globalVariable.getBid();
+        String p=String.valueOf(prn);
+        Toast.makeText(getApplicationContext(), p, Toast.LENGTH_LONG).show();
+        
     }
 
 }

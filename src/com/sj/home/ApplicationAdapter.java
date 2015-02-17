@@ -3,6 +3,7 @@ package com.sj.home;
 import java.text.NumberFormat;
 import java.util.List;
 
+import com.sj.jsondemo.GlobalClass;
 import com.sj.jsondemo.R;
 
 import android.content.Context;
@@ -22,9 +23,11 @@ import android.widget.Toast;
 
 public class ApplicationAdapter extends ArrayAdapter<Application>{
     private List<Application> items;
+    Context c;
     View v;
     public ApplicationAdapter(Context context, List<Application> items) {
         super(context, R.layout.activity_home, items);
+        this.c=context;
         this.items = items;
     }
     
@@ -36,6 +39,9 @@ public class ApplicationAdapter extends ArrayAdapter<Application>{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         v = convertView;
+        
+
+        final GlobalClass globalVariable = (GlobalClass) c.getApplicationContext();
         
         if(v == null) {
             LayoutInflater li = LayoutInflater.from(getContext());
@@ -55,19 +61,26 @@ public class ApplicationAdapter extends ArrayAdapter<Application>{
             
             
                         
-            if(username != null) username.setText(app.getUsername());
+            if(username != null){
+            	username.setText(app.getUsername());
+            	globalVariable.setUsername(app.getUsername());
+            }
             
             if(name != null) {
                 //NumberFormat nf = NumberFormat.getNumberInstance();
                 //name.setText(nf.format(app.getTotalDl())+"Rs.");
-            	name.setText("Welcome "+app.getName());
+            	//name.setText("Welcome "+app.getName());
+            	globalVariable.setName(app.getName());
+            	name.setText("Welcome "+globalVariable.getName());
             }
             
             if(u_prn != null) {
             	
                 String PRN=String.valueOf(app.getUid());
                 u_prn.setText(PRN);
+                globalVariable.setPrn(app.getUid());
             }
+            name.setText("Welcome "+globalVariable.getUsername());
             
           /*  if(ratingCntr != null && ratingCntr.getChildCount() == 0) {        
              
@@ -87,6 +100,7 @@ public class ApplicationAdapter extends ArrayAdapter<Application>{
                 }
             }*/
         }
+        
         
         return v;
     }

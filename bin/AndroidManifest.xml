@@ -7,9 +7,11 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />
+    
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.sj.jsondemo.GlobalClass"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -28,21 +30,33 @@
         <activity 
             android:name="com.sj.jsondemo.Login" 
             android:label="@string/app_name">
+            
         </activity>
         <activity 
             android:name="com.sj.jsondemo.Register" 
             android:label="@string/app_name">
         </activity>
         <activity 
+            android:name="com.sj.jsondemo.Home" 
+            android:label="@string/app_name">
+        </activity>
+        <activity 
             android:name="com.sj.home.Home" 
             android:label="@string/app_name">
-            
+        </activity>
+        <activity 
+            android:name="com.sj.timetable.Timetable" 
+            android:label="@string/app_name">
+        </activity>
+        
+        <activity 
+            android:name="com.sj.groups.Groups" 
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
         </activity>
     </application>
 

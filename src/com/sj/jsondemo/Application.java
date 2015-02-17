@@ -1,33 +1,41 @@
 package com.sj.jsondemo;
 
+import android.content.Context;
+
 public class Application {
-    private String title;
-    private long totalDl;
-    private int rating;
-    private String icon;
+    private String name;
+    private String email;
+    private String username;
+    private String password;
+    Context c;
     
-    public String getTitle() {
-        return title;
+    Application(){
+    	
     }
-    public void setTitle(String title) {
-        this.title = title;
+    
+    public String getName() {
+        return name;
     }
-    public long getTotalDl() {
-        return totalDl;
+    public void setName(String name) {
+        this.name = name;
+        //globalVariable.setName(this.name);
     }
-    public void setTotalDl(long totalDl) {
-        this.totalDl = totalDl;
+    public String getEmail() {
+        return email;
     }
-    public int getRating() {
-        return rating;
+    public void setEmail(String email) {
+        this.email = email;
     }
-    public void setRating(int rating) {
-        this.rating = rating;
+    public String getUsername() {
+        return username;
     }
-    public String getIcon() {
-        return icon;
+    public void setUsername(String uname) {
+        this.username = uname;
     }
-    public void setIcon(String icon) {
-        this.icon = icon;
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String psswd) {
+        this.password = psswd;
     }
 }

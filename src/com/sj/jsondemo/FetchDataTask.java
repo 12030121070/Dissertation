@@ -16,14 +16,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.content.Context;
 import android.os.AsyncTask;
 
 public class FetchDataTask extends AsyncTask<String, Void, String>{
     private final FetchDataListener listener;
     private String msg;
+    Context c;
     
-    public FetchDataTask(FetchDataListener listener) {
+    public FetchDataTask(FetchDataListener listener,Context con) {
         this.listener = listener;
+        c=con;
     }
     
     @Override
@@ -76,10 +79,8 @@ public class FetchDataTask extends AsyncTask<String, Void, String>{
             for(int i=0; i<aJson.length(); i++) {
                 JSONObject json = aJson.getJSONObject(i);
                 Application app = new Application();
-                app.setTitle(json.getString("app_title"));
-                app.setTotalDl(+Long.parseLong(json.getString("total_dl")));
-                app.setRating(Integer.parseInt(json.getString("rating")));  
-                app.setIcon(json.getString("icon"));
+                app.setName(json.getString("name"));
+                app.setUsername(json.getString("username"));
                 
                 // add the app to apps list
                 apps.add(app);

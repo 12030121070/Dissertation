@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    
+
+    <TableLayout
+        android:layout_height="fill_parent"
+        android:layout_width="match_parent" >
+		<TableLayout  >
+		    <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weekly Timetable: "
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+		</TableLayout>
+        
+		<TableRow 
+		    android:background="#5C8AE6"
+		    android:layout_width="fill_parent">
+		    
+		    <TextView android:text="Time"
+		        android:padding="2dip"
+		        android:background="#CCE6FF"
+		        android:width="40dp"
+		        />
+		    
+		    <TextView android:text="MON"
+		        android:padding="8dip"
+		        android:width="48dp"
+		        />
+		    
+		    <TextView android:text="TUE "
+		        android:padding="8dip"
+		    android:background="#E0F0FF"
+		    android:width="47dp" />
+		    
+		    <TextView android:text="WED"
+		        android:padding="8dip"
+		        android:width="47dp"
+		        />
+		    
+		    <TextView android:text="THU"
+		        android:padding="8dip"
+		        android:background="#E0F0FF"
+		        android:width="47dp" />
+		    
+		    <TextView android:text="FRI"
+		        android:padding="8dip"
+		        android:width="46dp"/>
+		    
+		    <TextView 
+		        android:layout_width="fill_parent"
+		        android:text="SAT"
+		        android:padding="8dp"
+		        android:background="#E0F0FF"
+		        android:width="47dp"/>
+		    
+		</TableRow>
+        <TableRow
+            android:height="55dp"
+            android:layout_height="wrap_content">
+
+            <TextView android:text="08:30"
+                 android:height="85dp"
+                 android:background="#E0F0FF"/>
+            
+            <TextView android:text="Hi"
+                android:id="@+id/a11"
+                android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6"
+                android:textSize="12dp">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a21"
+				android:width="15dp"
+				android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a31"
+                android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a41"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a51"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip"
+                android:background="#f6f6f6">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a61"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:height="55dp">
+
+            <TextView android:text="10:00"
+                 android:height="85dp"
+                 android:background="#E0F0FF"/>
+            
+            <TextView android:text=""
+                android:id="@+id/a12"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a22"
+				android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a32"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a42"
+                android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a52"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a62"
+                android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+            </TextView>
+            
+        </TableRow>
+        <TableRow
+            android:height="85dp">
+
+            <TextView android:text="11:45"
+                 android:height="85dp"
+                 android:background="#E0F0FF"/>
+            
+            <TextView android:text=""
+                android:id="@+id/a13"
+                android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a23"
+				android:width="15dp"
+				android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a33"
+                android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a43"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a53"
+                android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a63"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+        </TableRow>
+        <TableRow android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_span="7"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="LUNCH BREAK" />
+
+        </TableRow>
+		<TableRow
+            android:height="55dp">
+
+            <TextView android:text="2:00"
+                 android:height="85dp"
+                 android:background="#E0F0FF"/>
+            
+            <TextView android:text=""
+                android:id="@+id/a14"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a24"
+				android:width="15dp"
+				android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a34"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a44"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a54"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a64"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">
+                android:padding="2dip">
+            </TextView>
+            
+        </TableRow>
+
+        <TableRow
+            android:height="55dp">
+
+            <TextView android:text="03:30"
+                 android:height="85dp"
+                 android:background="#E0F0FF"/>
+            
+            <TextView android:text=""
+                android:id="@+id/a15"
+                android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">>
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a25"
+				android:width="15dp"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a35"
+                android:width="15dp"
+                android:padding="2dip"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6">>
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a45"
+                android:width="15dp"
+                android:padding="2dip">
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a55"
+                android:width="15dp"
+                android:layout_height="fill_parent"
+                android:background="#f6f6f6"
+                android:padding="2dip" >
+            </TextView>
+            
+            <TextView android:text=""
+                android:id="@+id/a65"
+                android:width="15dp"
+                android:padding="2dip">
+            </TextView>
+            
+        </TableRow>
+        
+        
+    </TableLayout>
+
+</ScrollView>

@@ -1,15 +1,15 @@
 package com.sj.home;
 
 public class Application {
-    private double uid;
+    private long uid;
     private String username;
     private String password;
     private String name;
     
-    public double getUid() {
+    public long getUid() {
         return uid;
     }
-    public void setUid(double uid) {
+    public void setUid(long uid) {
         this.uid = uid;
     }
     public String getUsername() {
