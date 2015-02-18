@@ -26,7 +26,7 @@ public class ApplicationAdapter extends ArrayAdapter<Application>{
     private List<Application> items;
     View v;
     public ApplicationAdapter(Context context, List<Application> items) {
-        super(context, R.layout.groups_main, items);
+        super(context, R.layout.groups_name_main, items);
         this.items = items;
     }
     

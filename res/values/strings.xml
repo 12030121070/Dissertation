@@ -6,5 +6,5 @@
     <string name="hello_world">Hello world!</string>
     <string name="screen_name">SICSR</string>
     <string name="server_addr">172.20.10.3</string>
-
+	<string name="ARSH">ARSH</string>
 </resources>

@@ -5,7 +5,7 @@ import android.app.Application;
 	public class GlobalClass extends Application{
 		
 		
-		public String server_addr="http://10.10.25.34:8888";
+		public String server_addr="http://192.168.1.18:8888";
 		private long prn;
 	    private String username;
 	    private String password;

@@ -8,6 +8,11 @@
 package com.sj.jsondemo;
 
 public final class R {
+    public static final class anim {
+        public static final int custom_anim=0x7f040000;
+        public static final int fade_in=0x7f040001;
+        public static final int fade_in2=0x7f040002;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -17,8 +22,8 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int angrybird=0x7f020000;
@@ -32,95 +37,124 @@ public final class R {
         public static final int linkedin=0x7f020008;
         public static final int shutterstock_59530873=0x7f020009;
         public static final int skype=0x7f02000a;
-        public static final int start_checked=0x7f02000b;
-        public static final int start_unchecked=0x7f02000c;
-        public static final int twitter=0x7f02000d;
-        public static final int whatsapp=0x7f02000e;
-        public static final int youtube=0x7f02000f;
+        public static final int splash0=0x7f02000b;
+        public static final int splash1=0x7f02000c;
+        public static final int splash2=0x7f02000d;
+        public static final int splash3=0x7f02000e;
+        public static final int start_checked=0x7f02000f;
+        public static final int start_unchecked=0x7f020010;
+        public static final int twitter=0x7f020011;
+        public static final int whatsapp=0x7f020012;
+        public static final int youtube=0x7f020013;
     }
     public static final class id {
-        public static final int E_NoticeBoard=0x7f080039;
-        public static final int GroupName=0x7f080009;
-        public static final int MyGroups=0x7f080038;
-        public static final int News=0x7f08003a;
-        public static final int Settings=0x7f08003b;
-        public static final int TimeTable=0x7f080037;
-        public static final int a11=0x7f080016;
-        public static final int a12=0x7f08001c;
-        public static final int a13=0x7f080022;
-        public static final int a14=0x7f080028;
-        public static final int a15=0x7f08002e;
-        public static final int a21=0x7f080017;
-        public static final int a22=0x7f08001d;
-        public static final int a23=0x7f080023;
-        public static final int a24=0x7f080029;
-        public static final int a25=0x7f08002f;
-        public static final int a31=0x7f080018;
-        public static final int a32=0x7f08001e;
-        public static final int a33=0x7f080024;
-        public static final int a34=0x7f08002a;
-        public static final int a35=0x7f080030;
-        public static final int a41=0x7f080019;
-        public static final int a42=0x7f08001f;
-        public static final int a43=0x7f080025;
-        public static final int a44=0x7f08002b;
-        public static final int a45=0x7f080031;
-        public static final int a51=0x7f08001a;
-        public static final int a52=0x7f080020;
-        public static final int a53=0x7f080026;
-        public static final int a54=0x7f08002c;
-        public static final int a55=0x7f080032;
-        public static final int a61=0x7f08001b;
-        public static final int a62=0x7f080021;
-        public static final int a63=0x7f080027;
-        public static final int a64=0x7f08002d;
-        public static final int a65=0x7f080033;
-        public static final int btn1=0x7f080004;
-        public static final int button1=0x7f080015;
-        public static final int checkBox1=0x7f080008;
-        public static final int dlTxt=0x7f08000a;
-        public static final int editText1=0x7f08000b;
-        public static final int editText2=0x7f080014;
-        public static final int editText3=0x7f080013;
-        public static final int editText4=0x7f080012;
-        public static final int gallery1=0x7f080034;
-        public static final int home=0x7f080035;
-        public static final int imageView1=0x7f080000;
-        public static final int item_detail_container=0x7f08000c;
-        public static final int linearLayout1=0x7f080005;
-        public static final int login=0x7f080010;
-        public static final int name=0x7f080001;
-        public static final int password=0x7f08000f;
-        public static final int prn=0x7f08000e;
-        public static final int register=0x7f080011;
-        public static final int search=0x7f080036;
-        public static final int table1=0x7f080006;
-        public static final int tableRow1=0x7f080007;
-        public static final int textView1=0x7f08000d;
-        public static final int u_prn=0x7f080002;
-        public static final int username=0x7f080003;
+        public static final int AnncHeading=0x7f090006;
+        public static final int Button01=0x7f090024;
+        public static final int E_NoticeBoard=0x7f09004b;
+        public static final int GroupName=0x7f09000b;
+        public static final int ImageView3_Left=0x7f09000e;
+        public static final int MyGroups=0x7f09004a;
+        public static final int News=0x7f09004c;
+        public static final int Settings=0x7f09004d;
+        public static final int TextViewTopTitle=0x7f09001f;
+        public static final int TimeTable=0x7f090049;
+        public static final int a11=0x7f090025;
+        public static final int a12=0x7f09002b;
+        public static final int a13=0x7f090031;
+        public static final int a14=0x7f090037;
+        public static final int a15=0x7f09003d;
+        public static final int a21=0x7f090026;
+        public static final int a22=0x7f09002c;
+        public static final int a23=0x7f090032;
+        public static final int a24=0x7f090038;
+        public static final int a25=0x7f09003e;
+        public static final int a31=0x7f090027;
+        public static final int a32=0x7f09002d;
+        public static final int a33=0x7f090033;
+        public static final int a34=0x7f090039;
+        public static final int a35=0x7f09003f;
+        public static final int a41=0x7f090028;
+        public static final int a42=0x7f09002e;
+        public static final int a43=0x7f090034;
+        public static final int a44=0x7f09003a;
+        public static final int a45=0x7f090040;
+        public static final int a51=0x7f090029;
+        public static final int a52=0x7f09002f;
+        public static final int a53=0x7f090035;
+        public static final int a54=0x7f09003b;
+        public static final int a55=0x7f090041;
+        public static final int a61=0x7f09002a;
+        public static final int a62=0x7f090030;
+        public static final int a63=0x7f090036;
+        public static final int a64=0x7f09003c;
+        public static final int a65=0x7f090042;
+        public static final int about_us=0x7f090010;
+        public static final int addfrag=0x7f09001e;
+        public static final int btn1=0x7f090004;
+        public static final int button1=0x7f090012;
+        public static final int button2=0x7f090013;
+        public static final int checkBox1=0x7f09000a;
+        public static final int close=0x7f090020;
+        public static final int dlTxt=0x7f09000c;
+        public static final int editText1=0x7f09000d;
+        public static final int editText2=0x7f09001b;
+        public static final int editText3=0x7f09001a;
+        public static final int editText4=0x7f090019;
+        public static final int fragment1=0x7f09001c;
+        public static final int fragment_container=0x7f09000f;
+        public static final int gInfo=0x7f090011;
+        public static final int gallery1=0x7f090046;
+        public static final int home=0x7f090047;
+        public static final int imageView1=0x7f090000;
+        public static final int item_detail_container=0x7f090005;
+        public static final int linearLayout1=0x7f090007;
+        public static final int linearlayout=0x7f09001d;
+        public static final int login=0x7f090017;
+        public static final int name=0x7f090001;
+        public static final int password=0x7f090016;
+        public static final int prn=0x7f090015;
+        public static final int register=0x7f090018;
+        public static final int search=0x7f090048;
+        public static final int spinner1=0x7f090043;
+        public static final int spinner2=0x7f090044;
+        public static final int spinner3=0x7f090045;
+        public static final int table1=0x7f090008;
+        public static final int tableRow1=0x7f090009;
+        public static final int textView1=0x7f090014;
+        public static final int textView2=0x7f090022;
+        public static final int textView3=0x7f090023;
+        public static final int today_container=0x7f090021;
+        public static final int u_prn=0x7f090002;
+        public static final int username=0x7f090003;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
-        public static final int cal=0x7f030001;
-        public static final int groups=0x7f030002;
-        public static final int groups_list=0x7f030003;
-        public static final int groups_main=0x7f030004;
-        public static final int layout_login=0x7f030005;
-        public static final int layout_register=0x7f030006;
-        public static final int splash_screen=0x7f030007;
-        public static final int timetables1=0x7f030008;
-        public static final int tryial=0x7f030009;
+        public static final int announcements=0x7f030001;
+        public static final int fragments=0x7f030002;
+        public static final int groups_announcements=0x7f030003;
+        public static final int groups_list=0x7f030004;
+        public static final int groups_name_main=0x7f030005;
+        public static final int individual_group_main=0x7f030006;
+        public static final int layout_login=0x7f030007;
+        public static final int layout_register=0x7f030008;
+        public static final int list_in_view=0x7f030009;
+        public static final int mygame=0x7f03000a;
+        public static final int splash_screen=0x7f03000b;
+        public static final int timetable_main_index=0x7f03000c;
+        public static final int timetables1=0x7f03000d;
+        public static final int trial=0x7f03000e;
+        public static final int tryial=0x7f03000f;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
-        public static final int screen_name=0x7f050003;
-        public static final int server_addr=0x7f050004;
+        public static final int ARSH=0x7f060005;
+        public static final int action_settings=0x7f060001;
+        public static final int app_name=0x7f060000;
+        public static final int hello_world=0x7f060002;
+        public static final int screen_name=0x7f060003;
+        public static final int server_addr=0x7f060004;
     }
     public static final class style {
         /** 
@@ -144,10 +178,31 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a MyGallery.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #MyGallery_android_galleryItemBackground android:galleryItemBackground}</code></td><td></td></tr>
+           </table>
+           @see #MyGallery_android_galleryItemBackground
+         */
+        public static final int[] MyGallery = {
+            0x0101004c
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#galleryItemBackground}
+          attribute's value can be found in the {@link #MyGallery} array.
+          @attr name android:galleryItemBackground
+        */
+        public static final int MyGallery_android_galleryItemBackground = 0;
+    };
 }

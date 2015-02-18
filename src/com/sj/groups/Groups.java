@@ -22,7 +22,7 @@ public class Groups extends ListActivity implements FetchDataListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);    
-        setContentView(R.layout.groups_main);        
+        setContentView(R.layout.groups_name_main);        
         initView(menucat);   
     }
     
@@ -63,7 +63,7 @@ public class Groups extends ListActivity implements FetchDataListener {
     	// show progress dialog
         dialog = ProgressDialog.show(this, "", "Loading...");
         
-        String url = "http://10.10.25.185:8888/GroupName.php";
+        String url = "http://172.20.10.7:8888/GroupName.php";
         FetchDataTask task = new FetchDataTask(this,this.getApplicationContext());
         task.execute(url);
     }
