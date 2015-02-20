@@ -45,22 +45,37 @@ public class ApplicationAdapter extends ArrayAdapter<Application>{
             //v.getLayoutParams().width=LayoutParams.WRAP_CONTENT;
            }
         
-        Application app = items.get(position);
+        final Application app = items.get(position);
         
         if(app != null) {
             TextView gName = (TextView)v.findViewById(R.id.GroupName);
             
+            /*
             OnClickListener listn=new OnClickListener(){
 
         		@Override
         		public void onClick(View v) {
         			Toast.makeText(getContext(), "Hello", Toast.LENGTH_LONG).show();
+        			//Intent i=new Intent(v.getActivity(),Groups_main.class);
+        			//startActivity(i);
 				// TODO Auto-generated method stub
 				//Intent intent=new Intent(v.getContext(), Timetable.class);
 	            //startActivity(intent);
         		}
             };
-            gName.setOnClickListener(listn);
+            gName.setOnClickListener(listn);*/
+            
+            gName.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                	Intent intent=new Intent(v.getContext(), Groups_main.class);
+                	int gid=app.getGroupId();
+                	String n=app.getGroupName();
+                	intent.putExtra("gid", gid);
+                	intent.putExtra("gname",n);
+                    getContext().startActivity(intent);
+                }
+            });
             
          // TableLayout ratingCntr = (TableLayout)v.findViewById(R.id.table1);
          // TextView dlText = (TextView)v.findViewById(R.id.username);

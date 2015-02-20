@@ -4,9 +4,7 @@ import android.content.Context;
 
 public class Application {
     private String name;
-    private String email;
-    private String username;
-    private String password;
+    private int gid;
     Context c;
     
     Application(){
@@ -20,22 +18,13 @@ public class Application {
         this.name = name;
         //globalVariable.setName(this.name);
     }
-    public String getEmail() {
-        return email;
+    public int getGroupId()
+    {
+    	return gid;
     }
-    public void setEmail(String email) {
-        this.email = email;
+    public void setGroupId(int gid) {
+        this.gid = gid;
+        
     }
-    public String getUsername() {
-        return username;
-    }
-    public void setUsername(String uname) {
-        this.username = uname;
-    }
-    public String getPassword() {
-        return password;
-    }
-    public void setPassword(String psswd) {
-        this.password = psswd;
-    }
+    
 }

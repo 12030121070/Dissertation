@@ -42,6 +42,8 @@ public class Groups_main extends FragmentActivity implements FetchAnncDataListen
 	TimerTask task;
 	ImageView slidingimage;
 	Bundle savedInstanceState;
+	String name;
+	int gid;
 	
 	private int[] IMAGE_IDS = {
 			R.drawable.splash0, R.drawable.splash1, R.drawable.splash2,
@@ -54,6 +56,10 @@ public class Groups_main extends FragmentActivity implements FetchAnncDataListen
         setContentView(R.layout.individual_group_main);
      
         this.savedInstanceState=savedInstanceState;
+        
+        Bundle bundle = getIntent().getExtras();
+        gid=bundle.getInt("gid");
+        name=bundle.getString("gname");
         
         initView(menucat);
         final Handler mHandler = new Handler();
@@ -82,6 +88,7 @@ public class Groups_main extends FragmentActivity implements FetchAnncDataListen
         }
 
         }, delay, period);
+     
         
     }
 	
@@ -136,7 +143,7 @@ public class Groups_main extends FragmentActivity implements FetchAnncDataListen
     	final GlobalClass g = (GlobalClass) getApplicationContext();
     	String addr=g.server_addr;
     	//String prn=String.valueOf(g.getPrn());
-    	String g_id="3";
+    	String g_id=String.valueOf(gid);
     	String url = addr+"/group_annc.php?gid="+g_id;
     
     //+String.valueOf(globalVariable.getPrn());
@@ -154,11 +161,14 @@ public void onFetchComplete(List<Announcements> data) {
     
     if(dialog != null)  dialog.dismiss();
     // create new adapter
+    if(data.size()!=0)
+    {
     Announcements app= data.get(0);
-    
-    if(app != null) {
+    }
+    //if(app != null) {
     	
-    	Toast.makeText(getApplicationContext(), String.valueOf(app.getGroupId()),Toast.LENGTH_LONG).show();
+    	//Toast.makeText(getApplicationContext(), String.valueOf(app.getGroupId()),Toast.LENGTH_LONG).show();
+    	Toast.makeText(getApplicationContext(), String.valueOf(gid),Toast.LENGTH_LONG).show();
     	
     	//LinearLayout ntc=(LinearLayout) findViewById(R.id.stuff);
     	//TextView headingText = (TextView) findViewById(R.id.heading);
@@ -185,8 +195,14 @@ public void onFetchComplete(List<Announcements> data) {
                 return;
             }
     		
-    		Annc_Trial firstFragment = new Annc_Trial();
+    		Annc_Trial firstFragment = new Annc_Trial(gid);
     		getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,firstFragment).commit();
+    	}
+    	
+    	TextView gtitle=(TextView) findViewById(R.id.GroupTitle);
+    	if(gtitle!=null)
+    	{
+    		gtitle.setText(name);
     	}
     	/*
     	Button timetable=(Button)  findViewById(R.id.btn1);
@@ -226,7 +242,8 @@ public void onFetchComplete(List<Announcements> data) {
      * 
      * 
      */
-    	}
+    	//}
+    //}
 	}
 
 	@Override

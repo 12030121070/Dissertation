@@ -9,6 +9,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/GroupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <ImageView android:id="@+id/ImageView3_Left"
         android:layout_width="290dp"
         android:layout_height="240dp"

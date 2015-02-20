@@ -16,7 +16,7 @@
     android:orientation="horizontal" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/pName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Program: "
@@ -24,14 +24,14 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/bName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Batch: " 
         android:layout_weight="1"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Div"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Division: " 
@@ -39,18 +39,32 @@
     
     </LinearLayout>
 
+
+	<FrameLayout android:id="@+id/decider_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+	    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
    <Button
-       android:id="@+id/button1"
+       android:id="@+id/sw_button"
        android:layout_width="221dp"
        android:layout_height="wrap_content"
        android:layout_gravity="center"
        android:text="Weekly Schedule" />
 
    <Button
-       android:id="@+id/Button01"
+       android:id="@+id/all_button"
        android:layout_width="221dp"
        android:layout_height="wrap_content"
        android:layout_gravity="center"
        android:text="Check Other TimeTable" />
+   
+   </LinearLayout>
+   
+   </FrameLayout>
 
 </LinearLayout>

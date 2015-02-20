@@ -80,7 +80,7 @@ public class FetchDataTask extends AsyncTask<String, Void, String>{
                 JSONObject json = aJson.getJSONObject(i);
                 Application app = new Application();
                 app.setGroupName(json.getString("group_name"));
-                
+                app.setGroupId(json.getInt("g_id"));
                 // add the app to apps list
                 apps.add(app);
             }

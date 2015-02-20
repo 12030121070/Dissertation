@@ -24,10 +24,17 @@ public class Annc_Trial extends ListFragment implements FetchAnncDataListener{
 	
 	private ProgressDialog dialog;
     private String menucat="home";
+    private int gid;
+    
+    Annc_Trial(int gid)
+    {
+    	this.gid=gid;
+    }
     
 	@Override
 	   public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
 		
+				
 			   //ArrayAdapter<String> adapter = new ArrayAdapter<String>(inflater.getContext(), android.R.layout.simple_list_item_1, numbers_text);  
 			   //setListAdapter(adapter);
 			   initView(menucat);
@@ -53,7 +60,7 @@ public class Annc_Trial extends ListFragment implements FetchAnncDataListener{
     	String addr=g.server_addr;
     	//String prn=String.valueOf(g.getPrn());
     	String g_id="3";
-    	String url = addr+"/group_annc.php?gid="+g_id;
+    	String url = addr+"/group_annc.php?gid="+gid;
         FetchAnncDataTask task = new FetchAnncDataTask(this,getActivity());
         task.execute(url);
     }

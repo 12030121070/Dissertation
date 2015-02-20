@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.sj.jsondemo.GlobalClass;
 import com.sj.jsondemo.MainActivity;
 import com.sj.jsondemo.R;
 
@@ -32,6 +35,8 @@ public class Groups extends ListActivity implements FetchDataListener {
 	inft.inflate(R.menu.main, menu);
 	return(super.onCreateOptionsMenu(menu));
     }
+    
+    
     
     @Override
     public boolean onOptionsItemSelected(MenuItem mitem){
@@ -63,7 +68,10 @@ public class Groups extends ListActivity implements FetchDataListener {
     	// show progress dialog
         dialog = ProgressDialog.show(this, "", "Loading...");
         
-        String url = "http://172.20.10.7:8888/GroupName.php";
+      //GlobalClass 
+    	final GlobalClass g = (GlobalClass) getApplicationContext();
+    	String addr=g.server_addr;
+        String url = addr+"/GroupName.php";
         FetchDataTask task = new FetchDataTask(this,this.getApplicationContext());
         task.execute(url);
     }
