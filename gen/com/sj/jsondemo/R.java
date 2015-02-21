@@ -50,15 +50,15 @@ public final class R {
     public static final class id {
         public static final int AnncHeading=0x7f090006;
         public static final int Div=0x7f090025;
-        public static final int E_NoticeBoard=0x7f09004f;
+        public static final int E_NoticeBoard=0x7f090051;
         public static final int GroupName=0x7f09000b;
         public static final int GroupTitle=0x7f09000e;
         public static final int ImageView3_Left=0x7f09000f;
-        public static final int MyGroups=0x7f09004e;
-        public static final int News=0x7f090050;
-        public static final int Settings=0x7f090051;
+        public static final int MyGroups=0x7f090050;
+        public static final int News=0x7f090052;
+        public static final int Settings=0x7f090053;
         public static final int TextViewTopTitle=0x7f090020;
-        public static final int TimeTable=0x7f09004d;
+        public static final int TimeTable=0x7f09004f;
         public static final int a11=0x7f090029;
         public static final int a12=0x7f09002f;
         public static final int a13=0x7f090035;
@@ -93,6 +93,7 @@ public final class R {
         public static final int addfrag=0x7f09001f;
         public static final int all_button=0x7f090028;
         public static final int bName=0x7f090024;
+        public static final int back=0x7f09004a;
         public static final int btn1=0x7f090004;
         public static final int button1=0x7f090013;
         public static final int button2=0x7f090014;
@@ -107,8 +108,9 @@ public final class R {
         public static final int fragment1=0x7f09001d;
         public static final int fragment_container=0x7f090010;
         public static final int gInfo=0x7f090012;
-        public static final int gallery1=0x7f09004a;
-        public static final int home=0x7f09004b;
+        public static final int gallery1=0x7f09004c;
+        public static final int go=0x7f09004b;
+        public static final int home=0x7f09004d;
         public static final int imageView1=0x7f090000;
         public static final int item_detail_container=0x7f090005;
         public static final int linearLayout1=0x7f090007;
@@ -119,7 +121,7 @@ public final class R {
         public static final int password=0x7f090017;
         public static final int prn=0x7f090016;
         public static final int register=0x7f090019;
-        public static final int search=0x7f09004c;
+        public static final int search=0x7f09004e;
         public static final int spinner1=0x7f090047;
         public static final int spinner2=0x7f090048;
         public static final int spinner3=0x7f090049;

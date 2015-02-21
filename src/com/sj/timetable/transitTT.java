@@ -31,7 +31,7 @@ public class transitTT extends Activity implements TimetableVariableListener{
         
         final GlobalClass g = (GlobalClass) getApplicationContext();
 	    String addr=g.server_addr;
-        String url = addr+"/batch_info.php?prn="+"12030121070";
+        String url = addr+"/batch_info.php?prn="+g.getPrn();
         
         TimetableVariableDataFetch task = new TimetableVariableDataFetch(this);
         task.execute(url);
@@ -49,9 +49,9 @@ public class transitTT extends Activity implements TimetableVariableListener{
         if(app!=null)
         {
         	
-        	g.setBid(app.getBid());
+        	//g.setBid(app.getBid());
         	g.setDid(app.getDid());
-        	g.setPid(app.getPid());
+        	//g.setPid(app.getPid());
         	g.setBatch(app.getBname());
         	g.setProgram(app.getPname());
         	g.setDname(app.getDname());

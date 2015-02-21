@@ -30,7 +30,11 @@
         <activity 
             android:name="com.sj.jsondemo.Login" 
             android:label="@string/app_name">
-            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity 
             android:name="com.sj.jsondemo.Register" 
@@ -88,11 +92,7 @@
         <activity 
             android:name="com.sj.timetable.transitTT" 
             android:label="@string/app_name">
-            	<intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            	
         </activity>
     </application>
 

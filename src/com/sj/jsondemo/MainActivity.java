@@ -3,7 +3,9 @@ package com.sj.jsondemo;
 import java.text.NumberFormat;
 import java.util.List;
 
+import com.sj.groups.Groups;
 import com.sj.timetable.Timetable;
+import com.sj.timetable.transitTT;
 
 import android.app.Activity;
 import android.app.ListActivity;
@@ -50,12 +52,19 @@ public class MainActivity extends Activity implements FetchDataListener{
         	switch(mitem.getItemId()){
       	
         	case R.id.home: menucat="home"; 
-			Intent intent2 = new Intent(getApplicationContext(), MainActivity.class);
-			startActivity(intent2);
-			break;        	
-        	case R.id.TimeTable: menucat="TimeTable"; break;
-        		
-        	case R.id.MyGroups: menucat="MyGroups";break;
+							Intent intent2 = new Intent(getApplicationContext(), MainActivity.class);
+							startActivity(intent2);
+							break;
+    	
+        	case R.id.TimeTable: menucat="TimeTable"; 
+				 				 Intent intent3 = new Intent(getApplicationContext(), transitTT.class);
+				 				 startActivity(intent3);
+				 				 break;
+
+        	case R.id.MyGroups: menucat="MyGroups";
+								Intent intent4 = new Intent(getApplicationContext(), Groups.class);
+								startActivity(intent4);
+								break;
         	
         	case R.id.E_NoticeBoard: menucat="E-Notice Board";break;
         	

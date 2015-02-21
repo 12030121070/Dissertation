@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
+import com.sj.groups.Groups;
 import com.sj.jsondemo.Application;
 import com.sj.jsondemo.GlobalClass;
 import com.sj.jsondemo.MainActivity;
@@ -30,11 +31,26 @@ public class Timetable extends Activity implements FetchDataListener{
 			
 	private ProgressDialog dialog;
 	private String menucat="starters_VEG";
+	private int did;
+	private int bid;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);        
-        setContentView(R.layout.timetables1);        
+        setContentView(R.layout.timetables1);
+        
+        Bundle filter=getIntent().getExtras();
+        if(filter!=null)
+        {
+        	did=filter.getInt("did");
+        	bid=filter.getInt("bid");
+        }
+        else
+        {
+        	final GlobalClass g = (GlobalClass) getApplicationContext();
+        	did=g.getDid();
+        	bid=g.getBid();
+        }
         initView(menucat);   
         
         String weekDay;
@@ -63,9 +79,15 @@ public class Timetable extends Activity implements FetchDataListener{
         					startActivity(intent2);
         					break;
         	        	
-        	case R.id.TimeTable: menucat="TimeTable"; break;
+        	case R.id.TimeTable: menucat="TimeTable"; 
+        						 Intent intent3 = new Intent(getApplicationContext(), transitTT.class);
+        						 startActivity(intent3);
+        						 break;
         		
-        	case R.id.MyGroups: menucat="MyGroups";break;
+        	case R.id.MyGroups: menucat="MyGroups";
+        						Intent intent4 = new Intent(getApplicationContext(), Groups.class);
+        						startActivity(intent4);
+        						break;
         	
         	case R.id.E_NoticeBoard: menucat="E-Notice Board";break;
         	
@@ -85,7 +107,8 @@ public class Timetable extends Activity implements FetchDataListener{
         
         final GlobalClass g = (GlobalClass) getApplicationContext();
 	    String addr=g.server_addr;
-        String url = addr+"/tt.php";
+	    
+        String url = addr+"/tt.php?did="+this.did+"&bid="+this.bid;
         
         FetchDataTask task = new FetchDataTask(this);
         task.execute(url);

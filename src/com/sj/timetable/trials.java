@@ -17,9 +17,11 @@ import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -70,23 +72,65 @@ public class trials extends Fragment implements OnItemSelectedListener{
 		
 		
 		switch(parent.getId()){
-        case R.id.spinner1 :
+        case R.id.spinner1:
         	if(pos==0 && count==0)
-        	{initView(1);
-        	count++;}
+        	{
+        		initView(1);
+        		count++;
+        	}
         	else if(pos==0)
         	{
         		Spinner spinner2 = (Spinner) rootView.findViewById(R.id.spinner2);
         		spinner2.setEnabled(false);
+        		Spinner spinner3 = (Spinner) rootView.findViewById(R.id.spinner3);
+        		spinner3.setEnabled(false);
         	}
         	else
-        	initView(2);
-              //Your Action Here.
+        	{
+        		//Toast.makeText(getActivity(), pos, Toast.LENGTH_LONG).show();
+        		initView(2);
+        	}
               break;
         case R.id.spinner2 :
-        	
+        	if(pos==0)
+        	{
+        		Spinner spinner3 = (Spinner) rootView.findViewById(R.id.spinner3);
+        		spinner3.setEnabled(false);
+        	}
+        	else
+        	{
+        		//Toast.makeText(getActivity(), pos, Toast.LENGTH_LONG).show();
+        		initView(3);
+        	}
               //Your Another Action Here.
         break;
+        case R.id.spinner3 :
+        	Button back=(Button) rootView.findViewById(R.id.back);
+    		Button go=(Button) rootView.findViewById(R.id.go);
+    		go.setVisibility(View.VISIBLE);
+        	if(pos!=0)
+        	{
+        		if(go !=null)
+                {
+                	OnClickListener l=new OnClickListener(){
+
+                		@Override
+                		public void onClick(View v2) {
+                			
+        				// TODO Auto-generated method stub
+        				Intent intent=new Intent(getActivity(), Timetable.class);
+        				intent.putExtra("did", 212);
+        				intent.putExtra("bid", 12);
+        	            startActivity(intent);
+                		}
+                };
+                go.setOnClickListener(l);
+                }
+        	}
+        	else
+        	{
+        		go.setVisibility(View.INVISIBLE);
+        	}
        
 		}
 		//Toast.makeText(getActivity(), "Works", Toast.LENGTH_LONG).show();
@@ -117,6 +161,7 @@ public class trials extends Fragment implements OnItemSelectedListener{
 		}
 		else if(c==2)
 		{
+			dialog = ProgressDialog.show(getActivity(), "", "Loading...");
 			Spinner spinner2 = (Spinner) rootView.findViewById(R.id.spinner2);
 			spinner2.setEnabled(true);
 			
@@ -125,6 +170,19 @@ public class trials extends Fragment implements OnItemSelectedListener{
 	        String url = addr+"/batch.php";
 	        
 	        BatchDataTask task = new BatchDataTask(this);
+	        task.execute(url);
+		}
+		else if(c==3)
+		{
+			dialog = ProgressDialog.show(getActivity(), "", "Loading...");
+			Spinner spinner3 = (Spinner) rootView.findViewById(R.id.spinner3);
+			spinner3.setEnabled(true);
+			
+			final GlobalClass g = (GlobalClass) getActivity().getApplicationContext();
+		    String addr=g.server_addr;
+	        String url = addr+"/div.php";
+	        
+	        DivDataTask task = new DivDataTask(this);
 	        task.execute(url);
 		}
     }
@@ -173,6 +231,27 @@ public class trials extends Fragment implements OnItemSelectedListener{
 	        spinner.setOnItemSelectedListener(this);
 	        count=2;
 	        }
+		}
+		else if(spin_num==3)
+		{
+			if(data!=null)
+	        {
+			
+			Div=new String[data.size()+1];
+			Div[0]="Select Division";
+			for(int i=0;i<data.size();i++)
+			{
+				DivisionNames app= (DivisionNames) data.get(i);
+				Div[i+1]=app.getDname();
+			}
+			Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner3);
+	        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, Div); 
+	        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+	        spinner.setAdapter(spinnerArrayAdapter);
+	        spinner.setOnItemSelectedListener(this);
+	        count=2;
+	        }
+			
 		}
 		if(dialog != null)  dialog.dismiss();
 		
